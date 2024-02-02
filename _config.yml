@@ -1,6 +1,6 @@
-url: "https://www.heyday.so" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.nowadays.tech" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Heyday" # the name of your site, e.g. ACME Corp.
+title: "Nowadays" # the name of your site, e.g. ACME Corp.
 
 permalink: ':collection/:slug'
 
