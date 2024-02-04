@@ -6,15 +6,13 @@ permalink: ':collection/:slug'
 
 include:
   - _pages
-  - _legal
+  - _ventures
 
 collections:
-  pages:
+  ventures:
     permalink: /:slug/
   posts:
     permalink: /journal/:slug/
-  legal:
-    output: true
 
 plugins:
   - jekyll-postcss-v2

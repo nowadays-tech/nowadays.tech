@@ -10,21 +10,25 @@ title: "Nowadays"
   <div class="w-1/2 grow-0">
     <h1 class="text-6xl font-serif tracking-tighter text-neutral-400">
       Nice to meet you!<br>
-      We are <i class="text-neutral-700">Nowadays</i>. A location independent venture studio.
+      We are <i class="text-neutral-900">Nowadays</i>. A minimal venture studio.
     </h1>
   </div>
 </section>
 
 <!-- Portfolio -->
 <section class="grid grid-cols-2 px-3 gap-3">
-  {% for i in (1..6) %}
+  {% for venture in site.ventures %}
     <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative grayscale hover:filter-none transition ease-in-out delay-150">
       <div class="absolute top-3 left-3">
-        <p>Heyday</p>
-        <p class="text-neutral-400">Mental Health</p>
+        <p>{{ venture.title }}</p>
+        <p class="text-neutral-400">{{ venture.focus }}</p>
       </div>
       <div class="absolute inset-0 grid place-items-center">
-        <span class="text-3xl text-yellow-600">Heyday</span>
+        {% if venture.logo == null %}
+          <span class="text-7xl font-medium">{{ venture.title }}</span>
+        {% else %}
+          <img src="{{ venture.logo }}" alt="{{ venture.title }} logo" class="w-1/2">
+        {% endif %}
       </div>
     </div>
   {% endfor %}
