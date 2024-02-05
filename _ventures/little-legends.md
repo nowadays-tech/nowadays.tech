@@ -1,6 +1,6 @@
 ---
 title: Little Legends
-focus: Children
+focus: Empowerment through storytelling
 ---
 
 Placeholder
