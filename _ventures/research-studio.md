@@ -1,5 +1,5 @@
 ---
-title: research.studio
+title: Research Studio
 focus: TBA
 ---
 
