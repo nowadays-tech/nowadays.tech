@@ -18,12 +18,12 @@ title: "Nowadays"
 <!-- Portfolio -->
 <section class="grid grid-cols-2 px-3 gap-3">
   {% for venture in site.ventures %}
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative grayscale hover:filter-none transition ease-in-out delay-150">
+    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>{{ venture.title }}</p>
         <p class="text-neutral-400">{{ venture.focus }}</p>
       </div>
-      <div class="absolute inset-0 grid place-items-center">
+      <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
         {% if venture.logo == null %}
           <span class="text-7xl font-medium">{{ venture.title }}</span>
         {% else %}
