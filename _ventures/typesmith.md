@@ -1,6 +1,6 @@
 ---
 title: Typesmith
-focus: Writing
+focus: TBA
 ---
 
 Placeholder

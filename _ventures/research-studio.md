@@ -1,6 +1,6 @@
 ---
 title: research.studio
-focus: Research
+focus: TBA
 ---
 
 Placeholder
