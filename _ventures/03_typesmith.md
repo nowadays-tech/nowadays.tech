@@ -1,6 +1,6 @@
 ---
 title: Typesmith
-focus: TBA
+focus: AI-assisted writing
 ---
 
 Placeholder
