@@ -1,6 +1,6 @@
 ---
 title: Heyday
-focus: Democratising mental health support
+focus: Accessible mental health support
 logo: ../assets/images/heyday_wordmark.svg
 ---
 
