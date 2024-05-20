@@ -78,6 +78,7 @@ function init() {
   // Special case: append effect.domElement, instead of renderer.domElement.
   // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
 
+  document.getElementById("ascii").style.whiteSpace = "prewrap"
   document.body.appendChild( effect.domElement );
 
   controls = new TrackballControls( camera, effect.domElement );
