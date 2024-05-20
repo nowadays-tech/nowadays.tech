@@ -73,7 +73,7 @@ function init() {
   effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
   effect.setSize( window.innerWidth, window.innerHeight );
   effect.domElement.style.color = 'white';
-  effect.domElement.style.backgroundColor = 'gray';
+  effect.domElement.style.backgroundColor = 'transparent';
 
   // Special case: append effect.domElement, instead of renderer.domElement.
   // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
