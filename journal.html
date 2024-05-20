@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US" >
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="ascii" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta charset="utf-8">
     
       <title>Journal — Nowadays</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+      }
+		</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script type="module" src="/assets/js/script.js" ></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
   </head>
-  <body class="antialiased bg-neutral-700" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white">
+  <body class="antialiased bg-neutral-700">
+    <main class="flex flex-col">
       <div class="">
   <nav class="px-3 py-3 flex items-center justify-between">
     <div>
