@@ -1,149 +1,119 @@
-import * as THREE from 'three'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as THREE from 'three';
 
-let camera,
-    controls,
-    scene,
-    renderer;
-var light1,
-    light2,
-    light3;
-var model,
-    model_loaded;
-var modelstatus = false;
+import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
+
+let camera, controls, scene, renderer, effect;
+
+let sphere, plane;
+const myMesh = new THREE.Mesh();
+
+//Material
+const material = new THREE.MeshStandardMaterial()
+material.flatShading = true
+material.side = THREE.DoubleSide;
+
+const start = Date.now();
+const stlLoader = new STLLoader()
 
 init();
 animate();
 
 function init() {
-    // scene
-    scene = new THREE.Scene()
-    scene.background = new THREE.Color(0x999999)//scene.fog = new THREE.FogExp2( 0xcccccc, 0.01 )
 
-    // renderer
-    renderer = new THREE.WebGLRenderer({
-        antialias: true
-    })
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.outputEncoding = THREE.sRGBEncoding;
-    document.body.appendChild(renderer.domElement)
-    // camera
-    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000)
-    camera.position.set(0, 0, 40)
-    // controls
-    controls = new OrbitControls(camera, renderer.domElement);
-    controls.listenToKeyEvents(window); // optional
-    //controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.25;
-    //controls.screenSpacePanning = false;
-    controls.enableZoom = false;
-    controls.minDistance = 40;
-    controls.maxDistance = 40;
-    //controls.maxPolarAngle = 0;
-    //controls.minPolarAngle = Math.PI/2;
-    //controls.maxPolarAngle = Math.PI/2;
+  camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
+  camera.position.y = 0;
+  camera.position.z = 0;
 
-    // world
-    const loader = new GLTFLoader()
-    // Tweak the materials and transparency
-    var newMaterial = new THREE.MeshStandardMaterial({
-        color: 0xffffff
-    });
-    newMaterial.transparent = true;
-    newMaterial.opacity = 0.3;
-    newMaterial.metalness = 0.8;
-    newMaterial.roughness = 0.5;
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color( 0, 0, 0 );
 
-    const onLoad = (glb) => {
-        console.log('model loaded');
-        scene.add(glb.scene);
-        glb.scene.scale.set(1, 1, 1)
-        glb.scene.position.set(15, -8, -29);
-        glb.scene.traverse((object) => {
-            if (object.isMesh)
-                object.material = newMaterial;
-        });
-        modelstatus = true;
-        model_loaded = glb
-        init_gsap();
-    }
+  const pointLight1 = new THREE.PointLight( 0xffffff, 3, 0, 0 );
+  pointLight1.position.set( 500, 500, 500 );
+  scene.add( pointLight1 );
 
-    loader.load('https://mitsukosato.com/wp-content/themes/lay-2/assets/wordmark-2.glb', (glb) => onLoad(glb))
-    // helper
-    const axesHelper = new THREE.AxesHelper(5);
-    //scene.add( axesHelper );
+  const pointLight2 = new THREE.PointLight( 0xffffff, 1, 0, 0 );
+  pointLight2.position.set( - 500, - 500, - 500 );
+  scene.add( pointLight2 );
 
-    // lights
-    light1 = new THREE.DirectionalLight(0xffffff, 5)
-    light1.position.set(0, 0, 100)
-    scene.add(light1)
-    var helper = new THREE.DirectionalLightHelper(light1, 5)//scene.add(helper);
+  stlLoader.load(
+    './assets/3d/nowadays.stl',
+    function (geometry) {
 
-    light2 = new THREE.DirectionalLight(0xffffff, 2);
-    light2.position.set(0, 0, -100);
-    scene.add(light2);
-    var helper2 = new THREE.DirectionalLightHelper(light2, 5)//scene.add(helper2);
+        myMesh.material = material;
+        myMesh.geometry = geometry;
 
-    light3 = new THREE.AmbientLight(0x555555, 0.5);
-    light3.position.set(0, 50, 50);
-    scene.add(light3);
+        var tempGeometry = new THREE.Mesh(geometry, material)
+        myMesh.position.copy = (tempGeometry.position)
 
-    // events
-    window.addEventListener('resize', onWindowResize);
+        geometry.computeVertexNormals();
+        myMesh.geometry.center()
+
+        myMesh.rotation.y = Math.PI / 2;
+
+        myMesh.geometry.computeBoundingBox();
+        var bbox = myMesh.geometry.boundingBox;
+
+        // myMesh.position.y = ((bbox.max.z - bbox.min.z));
+
+        camera.position.x = ((bbox.max.x * 0.9));
+        // camera.position.y = ((bbox.max.y / 2));
+        camera.position.z = ((bbox.max.z / 2));
+
+        scene.add(myMesh);
+      }
+   )
+
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+  effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+  effect.setSize( window.innerWidth, window.innerHeight );
+  effect.domElement.style.color = 'white';
+  effect.domElement.style.backgroundColor = 'gray';
+
+  // Special case: append effect.domElement, instead of renderer.domElement.
+  // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
+
+  document.body.appendChild( effect.domElement );
+
+  controls = new TrackballControls( camera, effect.domElement );
+
+  //
+
+  window.addEventListener( 'resize', onWindowResize );
+
 }
-
-
 
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  effect.setSize( window.innerWidth, window.innerHeight );
+
 }
 
-var r = 0.0;
+//
+
 function animate() {
 
-    light1.position.x = -75 * Math.cos(r);
-    light1.position.z = -75 * Math.sin(r);
+  requestAnimationFrame( animate );
 
-    light2.position.x = 75 * Math.cos(r);
-    light2.position.z = 75 * Math.sin(r);
-    r += 0.005;
-
-    //
-    requestAnimationFrame(animate)
-    controls.update();
-    render();
-
-}
-
-function init_gsap() {
-
-    model = model_loaded.scene.children[0];
-
-    var tl = gsap.timeline({
-        paused: false,
-        repeat: -1,
-        yoyo: true
-    });
-    tl.fromTo(model.position, 100,
-    {
-        x: 0,
-        y: 0,
-        ease: 'none'
-    },
-    {
-        x: -50,
-        y: 0,
-        ease: 'none'
-    }
-    );
+  render();
 
 }
 
 function render() {
-    renderer.render(scene, camera);
+  const timer = Date.now() - start;
+
+  myMesh.rotation.y = Math.PI / 180 * timer * 0.01;
+
+  controls.update();
+
+  effect.render( scene, camera );
 }
