@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US" >
   <head>
-    <meta id="ascii" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     
       <title>Journal — Nowadays</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
-        }
-      }
-		</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script type="module" src="/assets/js/script.js" ></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville" rel="stylesheet">
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="antialiased bg-neutral-700">
-    <main class="flex flex-col">
+  <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col bg-white">
+      <div class="">
+  <nav class="px-3 py-3 flex items-center justify-between">
+    <div>
+      <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-700">Nowadays</a>
+    </div>
+    <span class="text-sm text-neutral-400" x-text="new Date().getFullYear()">2030</span>
+  </nav>
+</div>
+
       <div class="">
   <nav class="px-3 py-3 flex items-center justify-between">
     <div>
@@ -46,6 +44,14 @@
 </div>
 
 <div class="flex justify-between items-end px-3 py-10 text-sm text-neutral-400">
+  <div>
+    <p>Get in touch</p>
+    <p class="text-neutral-700">hello@nowadays.tech</p>
+  </div>
+  <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
+</div>
+
+      <div class="flex justify-between items-end px-3 py-10 text-sm text-neutral-400">
   <div>
     <p>Get in touch</p>
     <p class="text-neutral-700">hello@nowadays.tech</p>
