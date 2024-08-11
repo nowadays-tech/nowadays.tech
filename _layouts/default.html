@@ -16,12 +16,14 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white min-h-screen px-3">
+    <main class="flex flex-col h-screen pt-14">
       {% include navigation.html %}
-      <div class="flex-grow">
-        {{ content }}
+      <div class="h-full flex flex-col bg-white p-3 overflow-y-auto">
+        <div class="flex-grow">
+          {{ content }}
+        </div>
+        {% include footer.html %}
       </div>
-      {% include footer.html %}
     </main>
   </body>
 </html>

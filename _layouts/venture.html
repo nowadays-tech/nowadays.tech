@@ -4,7 +4,7 @@ layout: default
 
 <div class="flex flex-col md:flex-row md:gap-x-3">
   <div class="w-full md:w-1/2 ">
-    <div class="max-w-screen-lg flex flex-col gap-y-12 md:sticky top-0 pt-12">
+    <div class="max-w-screen-lg flex flex-col gap-y-12 md:sticky top-0 pt-14">
       <div class="flex flex-col border-b border-gray-100 pb-6">
         <h1>{{ page.title }}</h1>
         <p class="text-neutral-500">{{ page.description }}</p>
@@ -46,11 +46,9 @@ layout: default
   </div>
   <div class="w-full md:w-1/2 flex flex-col gap-y-3">
     {% for image in page.images %}
-      <div class="bg-neutral-100 aspect-square rounded-lg block">
-        <div class="w-full h-full p-3 grid place-items-center">
-          <div class="rounded-md overflow-hidden">
-            <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" alt="{{ image.alt }}" class="w-full" />
-          </div>
+      <div class="bg-neutral-100 rounded-lg block">
+        <div class="w-full h-full p-4 grid place-items-center">
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" alt="{{ image.alt }}" class="w-full {% if image.frame %}border border-black/5{% endif %}" />
         </div>
       </div>
     {% endfor %}
