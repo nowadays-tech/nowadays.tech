@@ -14,9 +14,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white min-h-screen px-3">
-      <div class="border-b border-gray-100 mb-3">
-  <nav class="py-3 flex items-center justify-between">
+    <main class="flex flex-col h-screen pt-14">
+      <div class="fixed top-0 inset-x-0 bg-white border-b border-gray-100 mb-3">
+  <nav class="h-14 px-3 flex items-center justify-between">
     <div>
       <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-7000">Nowadays</a>
     </div>
@@ -24,8 +24,9 @@
   </nav>
 </div>
 
-      <div class="flex-grow">
-        <!-- Hero -->
+      <div class="h-full flex flex-col bg-white p-3 overflow-y-auto">
+        <div class="flex-grow">
+          <!-- Hero -->
 <section class="pt-52 md:pt-72 pb-10 flex items-end">
   <div class="grow-0">
     <h1 class="text-4xl font-light w-full lg:w-3/5 md:text-6xl tracking-tight text-neutral-400 text-pretty">
@@ -98,8 +99,8 @@
     </a>
   
 </section>
-      </div>
-      <div class="flex justify-between items-end py-10 text-sm text-neutral-400">
+        </div>
+        <div class="flex justify-between items-end pt-14 text-sm text-neutral-400">
   <div>
     <p>Get in touch</p>
     <p class="text-neutral-700">hello@nowadays.tech</p>
@@ -107,6 +108,7 @@
   <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
 </div>
 
+      </div>
     </main>
   </body>
 </html>
