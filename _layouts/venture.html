@@ -48,7 +48,7 @@ layout: default
     {% for image in page.images %}
       <div class="bg-neutral-100 rounded-lg block">
         <div class="w-full h-full p-12 lg:p-24 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" alt="{{ image.alt }}" class="w-full {% if image.frame %}border border-black/5{% endif %}" />
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full {% if image.frame %}border border-gray-200/50{% endif %}" />
         </div>
       </div>
     {% endfor %}
