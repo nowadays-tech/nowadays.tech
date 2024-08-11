@@ -47,7 +47,7 @@ layout: default
   <div class="w-full md:w-1/2 flex flex-col gap-y-3">
     {% for image in page.images %}
       <div class="bg-neutral-100 rounded-lg block">
-        <div class="w-full h-full p-4 grid place-items-center">
+        <div class="w-full h-full p-12 lg:p-24 grid place-items-center">
           <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" alt="{{ image.alt }}" class="w-full {% if image.frame %}border border-black/5{% endif %}" />
         </div>
       </div>
