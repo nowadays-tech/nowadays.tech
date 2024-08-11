@@ -14,18 +14,19 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white">
-      <div class="">
-  <nav class="px-3 py-3 flex items-center justify-between">
+    <main class="flex flex-col bg-white min-h-screen px-3">
+      <div class="border-b border-gray-100 mb-3">
+  <nav class="py-3 flex items-center justify-between">
     <div>
-      <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-700">Nowadays</a>
+      <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-7000">Nowadays</a>
     </div>
     <span class="text-sm text-neutral-400" x-text="new Date().getFullYear()">2030</span>
   </nav>
 </div>
 
-      <!-- Hero -->
-<section class="px-3 pt-52 md:pt-72 pb-10 flex items-end">
+      <div class="flex-grow">
+        <!-- Hero -->
+<section class="pt-52 md:pt-72 pb-10 flex items-end">
   <div class="grow-0">
     <h1 class="text-4xl font-light w-full lg:w-3/5 md:text-6xl tracking-tight text-neutral-400 text-pretty">
       <span class="font-normal text-neutral-800">Nowadays</span> is a minimal venture studio, exploring the application of emerging technologies to everyday problems.
@@ -34,21 +35,21 @@
 </section>
 
 <!-- Portfolio -->
-<section class="grid grid-cols-1 md:grid-cols-3 px-3 gap-3">
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3">
   
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="/ventures/01-heyday" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>Heyday</p>
         <p class="text-neutral-400">Accessible mental health support</p>
       </div>
       <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
         
-          <img src="../assets/images/heyday_wordmark.svg" alt="Heyday logo" class="w-1/2">
+          <img src="/assets/images/heyday/heyday_wordmark.svg" alt="Heyday logo" class="w-1/2">
         
       </div>
-    </div>
+    </a>
   
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="/ventures/02-little-legends" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>Little Legends</p>
         <p class="text-neutral-400">Empowerment through storytelling</p>
@@ -58,9 +59,9 @@
           <img src="../assets/images/ll_logotype_stacked.svg" alt="Little Legends logo" class="w-1/2">
         
       </div>
-    </div>
+    </a>
   
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="/ventures/03-typesmith" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>Typesmith</p>
         <p class="text-neutral-400">AI-assisted writing</p>
@@ -70,9 +71,9 @@
           <span class="text-4xl md:text-5xl font-semibold">Typesmith</span>
         
       </div>
-    </div>
+    </a>
   
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="/ventures/04-prescreen" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>Prescreen</p>
         <p class="text-neutral-400">TBA</p>
@@ -82,9 +83,9 @@
           <span class="text-4xl md:text-5xl font-semibold">Prescreen</span>
         
       </div>
-    </div>
+    </a>
   
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="/ventures/05-research-studio" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>Research Studio</p>
         <p class="text-neutral-400">TBA</p>
@@ -94,10 +95,11 @@
           <span class="text-4xl md:text-5xl font-semibold">Research Studio</span>
         
       </div>
-    </div>
+    </a>
   
 </section>
-      <div class="flex justify-between items-end px-3 py-10 text-sm text-neutral-400">
+      </div>
+      <div class="flex justify-between items-end py-10 text-sm text-neutral-400">
   <div>
     <p>Get in touch</p>
     <p class="text-neutral-700">hello@nowadays.tech</p>
