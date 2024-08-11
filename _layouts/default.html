@@ -6,7 +6,7 @@
     {% if page.title == site.title %}
       <title>{{ site.title | strip_html }}</title>
     {% else %}
-      <title>{{ page.title | strip_html }} — {{ site.title }}</title>
+      <title>{{ page.title | strip_html }} | {{ site.title }}</title>
     {% endif %}
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 
@@ -16,9 +16,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white">
+    <main class="flex flex-col bg-white min-h-screen px-3">
       {% include navigation.html %}
-      {{ content }}
+      <div class="flex-grow">
+        {{ content }}
+      </div>
       {% include footer.html %}
     </main>
   </body>

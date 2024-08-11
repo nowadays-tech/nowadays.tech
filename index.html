@@ -4,7 +4,7 @@ title: "Nowadays"
 ---
 
 <!-- Hero -->
-<section class="px-3 pt-52 md:pt-72 pb-10 flex items-end">
+<section class="pt-52 md:pt-72 pb-10 flex items-end">
   <div class="grow-0">
     <h1 class="text-4xl font-light w-full lg:w-3/5 md:text-6xl tracking-tight text-neutral-400 text-pretty">
       <span class="font-normal text-neutral-800">Nowadays</span> is a minimal venture studio, exploring the application of emerging technologies to everyday problems.
@@ -13,12 +13,12 @@ title: "Nowadays"
 </section>
 
 <!-- Portfolio -->
-<section class="grid grid-cols-1 md:grid-cols-3 px-3 gap-3">
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3">
   {% for venture in site.ventures %}
-    <div class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+    <a href="{{ venture.url }}" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>{{ venture.title }}</p>
-        <p class="text-neutral-400">{{ venture.focus }}</p>
+        <p class="text-neutral-400">{{ venture.description }}</p>
       </div>
       <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
         {% if venture.logo == null %}
@@ -27,6 +27,6 @@ title: "Nowadays"
           <img src="{{ venture.logo }}" alt="{{ venture.title }} logo" class="w-1/2">
         {% endif %}
       </div>
-    </div>
+    </a>
   {% endfor %}
 </section>

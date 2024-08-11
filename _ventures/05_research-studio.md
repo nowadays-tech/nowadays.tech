@@ -1,6 +1,6 @@
 ---
 title: Research Studio
-focus: TBA
+description: TBA
 ---
 
 Placeholder

@@ -2,7 +2,7 @@ url: "https://www.nowadays.tech" # the base hostname & protocol for your site, e
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Nowadays" # the name of your site, e.g. ACME Corp.
 
-permalink: ':collection/:slug'
+permalink: /:collection/:slug
 
 include:
   - _pages
@@ -10,12 +10,21 @@ include:
 
 collections:
   ventures:
-    permalink: /:slug/
-  posts:
-    permalink: /journal/:slug/
+    output: true
+    permalink: /:collection/:slug
+
+defaults:
+  - scope:
+      type: ventures
+    values:
+      layout: venture
 
 plugins:
   - jekyll-postcss-v2
 
 postcss:
   cache: false
+
+responsive:
+  widths: [400, 950, 1400]
+  quality: 90
