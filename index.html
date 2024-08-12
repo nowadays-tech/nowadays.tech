@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="antialiased tracking-tight bg-neutral-700 overflow-hidden" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col h-dvh pt-14 overflow-hidden">
-      <div class="fixed top-0 inset-x-0 bg-white border-b border-gray-100 mb-3">
+  <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col bg-white min-h-dvh pt-14">
+      <div class="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-100 mb-3">
   <nav class="h-14 px-3 flex items-center justify-between">
     <div>
       <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-7000">Nowadays</a>
@@ -24,7 +24,7 @@
   </nav>
 </div>
 
-      <div class="h-full flex flex-col bg-white p-3 overflow-y-auto">
+      <div class="h-full flex flex-col px-3">
         <div class="flex-grow">
           <!-- Hero -->
 <section class="pt-52 md:pt-72 pb-10 flex items-end">
@@ -74,9 +74,45 @@
       </div>
     </a>
   
+    <a href="/ventures/04-typecheck" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+      <div class="absolute top-3 left-3">
+        <p>Typecheck</p>
+        <p class="text-neutral-400">Personality assessment tool</p>
+      </div>
+      <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
+        
+          <span class="text-4xl md:text-5xl font-semibold">Typecheck</span>
+        
+      </div>
+    </a>
+  
+    <a href="/ventures/05-klerk" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+      <div class="absolute top-3 left-3">
+        <p>Klerk</p>
+        <p class="text-neutral-400">TBA</p>
+      </div>
+      <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
+        
+          <span class="text-4xl md:text-5xl font-semibold">Klerk</span>
+        
+      </div>
+    </a>
+  
+    <a href="/ventures/06-promptly" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
+      <div class="absolute top-3 left-3">
+        <p>Promptly</p>
+        <p class="text-neutral-400">TBA</p>
+      </div>
+      <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
+        
+          <span class="text-4xl md:text-5xl font-semibold">Promptly</span>
+        
+      </div>
+    </a>
+  
 </section>
         </div>
-        <div class="flex justify-between items-end pt-14 text-sm text-neutral-400">
+        <div class="flex justify-between items-end pt-14 pb-3 text-sm text-neutral-400">
   <div>
     <p>Get in touch</p>
     <p class="text-neutral-700">hello@nowadays.tech</p>
