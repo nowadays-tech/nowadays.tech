@@ -15,7 +15,7 @@
   }
 
   .text-formatted p {
-    @apply text-gray-500 mb-2 md:mb-3;
+    @apply mb-2 md:mb-3;
   }
 
   .text-formatted hr {
