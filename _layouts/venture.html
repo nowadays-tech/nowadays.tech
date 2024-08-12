@@ -4,7 +4,7 @@ layout: default
 
 <div class="flex flex-col md:flex-row md:gap-x-3">
   <div class="w-full md:w-1/2 ">
-    <div class="max-w-screen-lg flex flex-col gap-y-12 md:sticky top-0 py-14">
+    <div class="max-w-screen-lg flex flex-col gap-y-12 md:sticky md:top-14 py-14">
       <div class="flex flex-col border-b border-gray-100 pb-6">
         <h1>{{ page.title }}</h1>
         <p class="text-neutral-500">{{ page.description }}</p>
@@ -44,7 +44,7 @@ layout: default
       {% endif %}
     </div>
   </div>
-  <div class="w-full md:w-1/2 flex flex-col gap-y-3">
+  <div class="w-full md:w-1/2 flex flex-col gap-y-3 py-3">
     {% for image in page.images %}
       <div class="bg-neutral-100 rounded-lg block">
         <div class="w-full h-full p-12 lg:p-24 grid place-items-center">

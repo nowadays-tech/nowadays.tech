@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}" >
+<html lang="{{ site.lang | default: 'en-US' }}" >
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -8,17 +8,17 @@
     {% else %}
       <title>{{ page.title | strip_html }} | {{ site.title }}</title>
     {% endif %}
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="antialiased tracking-tight bg-neutral-700 overflow-hidden" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col h-dvh pt-14 overflow-hidden">
+  <body class="antialiased tracking-tight bg-neutral-700" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col bg-white min-h-dvh pt-14">
       {% include navigation.html %}
-      <div class="h-full flex flex-col bg-white p-3 overflow-y-auto">
+      <div class="h-full flex flex-col px-3">
         <div class="flex-grow">
           {{ content }}
         </div>
