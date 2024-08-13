@@ -14,7 +14,7 @@ title: "Nowadays"
 
 <!-- Portfolio -->
 <section class="grid grid-cols-1 md:grid-cols-3 gap-3">
-  {% for venture in site.ventures %}
+  {% for venture in site.ventures reversed %}
     <a href="{{ venture.url }}" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
       <div class="absolute top-3 left-3">
         <p>{{ venture.title }}</p>

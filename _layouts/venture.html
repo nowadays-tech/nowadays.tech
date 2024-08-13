@@ -46,9 +46,9 @@ layout: default
   </div>
   <div class="w-full md:w-1/2 flex flex-col gap-y-3 py-3">
     {% for image in page.images %}
-      <div class="bg-neutral-100 rounded-lg block">
+      <div class="bg-neutral-200/60 rounded-lg block">
         <div class="w-full h-full p-12 lg:p-24 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full {% if image.frame %}border border-gray-200/50{% endif %}" />
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-md {% if image.frame %}shadow-md{% endif %}" />
         </div>
       </div>
     {% endfor %}

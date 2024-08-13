@@ -8,7 +8,6 @@ technologies: [OpenAI, GPT-3.5, Function Calling, LLM]
 images:
   - path: /assets/images/typesmith/app_01.png
     alt: Typesmith app
-    frame: true
 ---
 
 The written word continues to be a cornerstone of human communication, expression, and influence in our digital age. From business professionals crafting persuasive reports to students composing insightful essays, from bloggers sharing their unique perspectives to novelists weaving intricate narratives, the need for clear, engaging, and impactful writing spans across diverse fields and purposes. 
