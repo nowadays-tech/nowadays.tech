@@ -1,7 +1,10 @@
 ---
 title: Little Legends
 description: Empowerment through storytelling
-logo: ../assets/images/ll_logotype_stacked.svg
+images:
+  - path: ../assets/images/ll_logotype_stacked.svg
+    alt: Little Legends logotype
+    featured: true
 ---
 
 Placeholder

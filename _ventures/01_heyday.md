@@ -2,17 +2,19 @@
 title: Heyday
 description: Accessible mental health support
 external_url: https://www.heyday.so
-logo: /assets/images/heyday/heyday_wordmark.svg
 status: Online
 released: 2023-03-01
 technologies: [OpenAI, GPT-3.5, Function Calling]
 images:
   - path: /assets/images/heyday/screen_01.png
     alt: Heyday app screenshot
-  - path: /assets/images/heyday/screen_02.png
-    alt: Heyday app screenshot
+    featured: true
+  - path: /assets/images/heyday/heyday_wordmark.svg
+    alt: Heyday wordmark
   - path: /assets/images/heyday/landing-page.png
     alt: Heyday landing page
+  - path: /assets/images/heyday/screen_02.png
+    alt: Heyday app screenshot
   - path: /assets/images/heyday/heyday-share.jpg
     alt: Heyday
 ---

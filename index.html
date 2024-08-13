@@ -15,16 +15,22 @@ title: "Nowadays"
 <!-- Portfolio -->
 <section class="grid grid-cols-1 md:grid-cols-3 gap-3">
   {% for venture in site.ventures reversed %}
-    <a href="{{ venture.url }}" class="bg-neutral-100 aspect-square rounded-lg p-3 text-sm relative">
-      <div class="absolute top-3 left-3">
-        <p>{{ venture.title }}</p>
-        <p class="text-neutral-400">{{ venture.description }}</p>
+    <a href="{{ venture.url }}" class="bg-neutral-200/60 aspect-square rounded-lg p-3 text-sm relative">
+      <div class="absolute top-0 inset-x-0 p-3 flex justify-between">
+        <div>
+          <p>{{ venture.title }}</p>
+          <p class="text-neutral-400">{{ venture.description }}</p>
+        </div>
+        <div>
+          <p class="text-neutral-400">{{ venture.path | split: "/" | last | split: "_" | first }}</p>
+        </div>
       </div>
       <div class="absolute inset-0 grid place-items-center opacity-60 hover:opacity-100 grayscale hover:filter-none transition duration-500 ease-in-out">
-        {% if venture.logo == null %}
-          <span class="text-4xl md:text-5xl font-semibold">{{ venture.title }}</span>
+        {% assign featured_images = venture.images | where: "featured", true %}
+        {% if featured_images.size > 0 %}
+          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-xs md:rounded-md">
         {% else %}
-          <img src="{{ venture.logo }}" alt="{{ venture.title }} logo" class="w-1/2">
+          <span class="text-4xl md:text-5xl font-semibold">{{ venture.title }}</span>
         {% endif %}
       </div>
     </a>
