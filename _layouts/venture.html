@@ -52,7 +52,7 @@ layout: default
     {% for image in page.images %}
       <div class="bg-neutral-200/40 rounded-lg block">
         <div class="w-full h-full p-12 lg:p-24 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-sm md:rounded-md {% if image.frame %}shadow-md{% endif %}" />
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-sm md:rounded-md {% if image.frame %}ring-4 ring-neutral-200{% endif %}" />
         </div>
       </div>
     {% endfor %}

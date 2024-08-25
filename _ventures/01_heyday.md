@@ -9,6 +9,7 @@ images:
   - path: /assets/images/heyday/screen_01.png
     alt: Heyday app screenshot
     featured: true
+    frame: true
   - path: /assets/images/heyday/heyday_wordmark.svg
     alt: Heyday wordmark
   - path: /assets/images/heyday/landing-page.png
