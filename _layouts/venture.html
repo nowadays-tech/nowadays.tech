@@ -4,43 +4,43 @@ layout: default
 
 <div class="flex flex-col md:flex-row md:gap-x-3">
   <div class="w-full md:w-1/2 ">
-    <div class="max-w-screen-lg flex flex-col gap-y-12 md:sticky md:top-14 py-14">
-      <div class="flex flex-col border-b border-gray-100 pb-6">
+    <div class="max-w-screen-lg flex flex-col gap-y-3 md:sticky md:top-14 py-3">
+      <div class="flex flex-col ">
         <h1>{{ page.title }}</h1>
         <p class="text-neutral-500">{{ page.description }}</p>
       </div>
-      <div class="text-formatted text-gray-500">
+      <div class="text-formatted text-neutral-500">
         {{ content }}
       </div>
       {% if page.status or page.released or page.external_url or page.technologies %}
         <dl class="divide-y divide-gray-100 border-t border-gray-100">
           <div class="grid grid-cols-2 py-1">
             <dt>Index</dt>
-            <dd class="text-gray-500">{{ page.path | split: "/" | last | split: "_" | first }}</dd>
+            <dd class="text-neutral-500">{{ page.path | split: "/" | last | split: "_" | first }}</dd>
           </div>
-          {% if page.status %}
-            <div class="grid grid-cols-2 py-1">
-              <dt>Status</dt>
-              <dd class="text-gray-500">{{ page.status }}</dd>
-            </div>
-          {% endif %}
           {% if page.released %}
             <div class="grid grid-cols-2 py-1">
               <dt>Released</dt>
-              <dd class="text-gray-500">{{ page.released | date: "%B %Y" }}</dd>
+              <dd class="text-neutral-500">{{ page.released | date: "%B %Y" }}</dd>
+            </div>
+          {% endif %}
+          {% if page.status %}
+            <div class="grid grid-cols-2 py-1">
+              <dt>Status</dt>
+              <dd class="text-neutral-500">{{ page.status }}</dd>
             </div>
           {% endif %}
           {% if page.external_url %}
             <div class="grid grid-cols-2 py-1">
               <dt>URL</dt>
-              <dd class="text-gray-500">{{ page.external_url }}</dd>
+              <dd class="text-neutral-500">{{ page.external_url }}</dd>
             </div>
           {% endif %}
           {% if page.technologies %}
             <div class="grid grid-cols-2 py-1">
               <dt>Technologies</dt>
-              <dd class="text-gray-500">
-                {{ page.technologies | join: ", " }}
+              <dd class="text-neutral-500">
+                {{ page.technologies | join: " · " }}
               </dd>
             </div>
           {% endif %}
@@ -51,8 +51,8 @@ layout: default
   <div class="w-full md:w-1/2 flex flex-col gap-y-3 py-3">
     {% for image in page.images %}
       <div class="bg-neutral-200/40 rounded-lg block">
-        <div class="w-full h-full p-12 lg:p-24 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-sm md:rounded-md {% if image.frame %}ring-1 ring-neutral-200/40{% endif %}" />
+        <div class="w-full h-full 2xl:p-20 xl:p-16 lg:p-12 grid place-items-center">
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-sm md:rounded-md" />
         </div>
       </div>
     {% endfor %}

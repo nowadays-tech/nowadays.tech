@@ -6,7 +6,7 @@ title: "Nowadays"
 <!-- Hero -->
 <section class="pt-52 md:pt-72 pb-10 flex items-end">
   <div class="grow-0">
-    <h1 class="text-4xl font-light w-full lg:w-3/5 md:text-6xl tracking-tight text-neutral-400 text-pretty">
+    <h1 class="text-4xl font-light w-full 2xl:w-3/5 lg:w-4/5 md:text-6xl tracking-tight text-neutral-400 text-pretty">
       <span class="font-normal text-neutral-800">Nowadays</span> is a minimal venture studio, exploring the application of emerging technologies to everyday problems.
     </h1>
   </div>
@@ -28,7 +28,7 @@ title: "Nowadays"
       <div class="absolute inset-0 grid place-items-center">
         {% assign featured_images = venture.images | where: "featured", true %}
         {% if featured_images.size > 0 %}
-          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-sm md:rounded-md {% if featured_images.first.frame %}ring-1 ring-neutral-200/40{% endif %} ">
+          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-sm md:rounded-md">
         {% else %}
           <span class="text-4xl md:text-5xl font-semibold">{{ venture.title }}</span>
         {% endif %}

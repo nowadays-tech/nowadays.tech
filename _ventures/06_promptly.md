@@ -1,6 +1,10 @@
 ---
 title: Promptly
 description: Prompt development and testing
+external_url: https://www.promptly.so
+status: Online
+released: 2024-03-01
+technologies: [OpenAI, LLM]
 images:
   - path: /assets/images/promptly/app_01.png
     alt: Promptly App
@@ -9,5 +13,4 @@ images:
     alt: Promptly Landing Page
 ---
 
-
-Placeholder
+LLMs are stochastic by design, and the quality of their output is highly dependent on the quality of the prompt. Promptly is a tool for developing, testing, and sharing prompts.
