@@ -28,7 +28,7 @@ title: "Nowadays"
       <div class="absolute inset-0 grid place-items-center">
         {% assign featured_images = venture.images | where: "featured", true %}
         {% if featured_images.size > 0 %}
-          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-sm md:rounded-md {% if featured_images.first.frame %}ring-4 ring-neutral-200{% endif %}">
+          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-sm md:rounded-md {% if featured_images.first.frame %}ring-1 ring-neutral-200/40{% endif %} ">
         {% else %}
           <span class="text-4xl md:text-5xl font-semibold">{{ venture.title }}</span>
         {% endif %}
