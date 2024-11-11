@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Inter var', ...defaultTheme.fontFamily.sans],
-      'serif': ['Baskervville', ...defaultTheme.fontFamily.serif]
+      'serif': ['Lora', ...defaultTheme.fontFamily.serif]
     },
   },
   plugins: [

@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="flex flex-col md:flex-row md:gap-x-3">
-  <div class="w-full md:w-1/2 ">
-    <div class="max-w-screen-lg flex flex-col gap-y-3 md:sticky md:top-14 py-3">
+  <div class="w-full md:w-1/2 max-w-screen-md">
+    <div class="flex flex-col gap-y-3 md:sticky md:top-14 py-3">
       <div class="flex flex-col ">
         <h1>{{ page.title }}</h1>
         <p class="text-neutral-500">{{ page.description }}</p>
@@ -48,11 +48,11 @@ layout: default
       {% endif %}
     </div>
   </div>
-  <div class="w-full md:w-1/2 flex flex-col gap-y-3 py-3">
+  <div class="w-full flex flex-col gap-y-3 py-3">
     {% for image in page.images %}
       <div class="bg-neutral-200/40 rounded-lg block">
         <div class="w-full h-full 2xl:p-20 xl:p-16 lg:p-12 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full rounded-sm md:rounded-md" />
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full max-w-screen-xl rounded-sm md:rounded-md" />
         </div>
       </div>
     {% endfor %}

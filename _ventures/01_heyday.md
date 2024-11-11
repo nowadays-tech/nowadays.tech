@@ -4,6 +4,7 @@ description: Accessible mental health support
 external_url: https://www.heyday.so
 status: Online
 released: 2023-03-01
+published: true
 technologies: [OpenAI, GPT-3.5, Function Calling]
 images:
   - path: /assets/images/heyday/screen_01.png
