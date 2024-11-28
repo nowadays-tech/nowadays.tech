@@ -1,7 +1,12 @@
 ---
 title: Klerk
-description: TBA
-published: false
+description: AI-powered due diligence
+published: true
+images:
+  - path: /assets/images/klerk/klerk_01.png
+    alt: Klerk
+    featured: true
+    border: true
 ---
 
-Placeholder
+Klerk is an AI-powered due diligence tool that helps companies extract and analyze data from a vast amount of documents.

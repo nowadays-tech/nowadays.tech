@@ -4,16 +4,16 @@ layout: default
 
 <div class="flex flex-col md:flex-row md:gap-x-3">
   <div class="w-full md:w-1/2 max-w-screen-md">
-    <div class="flex flex-col gap-y-3 md:sticky md:top-14 py-3">
-      <div class="flex flex-col ">
+    <div class="flex flex-col md:sticky md:top-14 divide-y divide-gray-100">
+      <div class="flex flex-col py-3">
         <h1>{{ page.title }}</h1>
         <p class="text-neutral-500">{{ page.description }}</p>
       </div>
-      <div class="text-formatted text-neutral-500">
+      <div class="text-formatted text-neutral-500 pt-3 pb-10">
         {{ content }}
       </div>
       {% if page.status or page.released or page.external_url or page.technologies %}
-        <dl class="divide-y divide-gray-100 border-t border-gray-100">
+        <dl class="divide-y divide-gray-100">
           <div class="grid grid-cols-2 py-1">
             <dt>Index</dt>
             <dd class="text-neutral-500">{{ page.path | split: "/" | last | split: "_" | first }}</dd>
@@ -52,7 +52,7 @@ layout: default
     {% for image in page.images %}
       <div class="bg-neutral-200/40 rounded-lg block">
         <div class="w-full h-full 2xl:p-20 xl:p-16 lg:p-12 grid place-items-center">
-          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full max-w-screen-xl rounded-sm md:rounded-md" />
+          <img loading="lazy" decoding="async" src="{{ image.path }}" srcset="{{ image.path | srcset }}" height="{{ image.path | height }}" width="{{ image.path | width }}" alt="{{ image.alt }}" class="w-full max-w-screen-xl rounded-sm md:rounded-md {% if image.border %}border border-gray-200{% endif %}" />
         </div>
       </div>
     {% endfor %}

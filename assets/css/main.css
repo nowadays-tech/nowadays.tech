@@ -18,6 +18,10 @@
     @apply mb-2 md:mb-3;
   }
 
+  .text-formatted p:last-of-type {
+    @apply mb-0;
+  }
+
   .text-formatted hr {
     @apply my-3 md:my-5;
   }
