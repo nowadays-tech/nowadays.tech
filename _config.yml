@@ -24,7 +24,3 @@ plugins:
 
 postcss:
   cache: false
-
-responsive:
-  widths: [400, 950, 1400]
-  quality: 90

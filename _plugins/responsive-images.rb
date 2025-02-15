@@ -95,4 +95,4 @@ module Jekyll
   
 end
 
-Liquid::Template.register_filter(Jekyll::ResponsiveFilter)
+# Liquid::Template.register_filter(Jekyll::ResponsiveFilter)

@@ -15,15 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville&family=Lora" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="antialiased tracking-tight bg-neutral-700 overflow-x-hidden" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white min-h-dvh pt-14">
-      {% include navigation.html %}
-      <div class="h-full flex flex-col px-3">
-        <div class="flex-grow">
-          {{ content }}
-        </div>
-        {% include footer.html %}
-      </div>
+  <body class="antialiased tracking-tight dark:bg-neutral-900" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col max-w-screen-2xl">
+      {{ content }}
     </main>
   </body>
 </html>

@@ -6,6 +6,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply text-neutral-900 dark:text-neutral-100;
+  }
+
   .text-formatted h1 {
     @apply font-serif text-3xl md:text-4xl text-center mb-10 md:mb-20;
   }

@@ -3,36 +3,54 @@ layout: default
 title: "Nowadays"
 ---
 
-<!-- Hero -->
-<section class="pt-52 md:pt-80 pb-10 md:pb-20 flex items-end">
-  <div class="grow-0">
-    <h1 class="text-4xl font-serif w-full 2xl:w-3/5 lg:w-4/5 md:text-6xl tracking-tight text-neutral-400 text-balance">
-      <span class="font-normal text-neutral-800">Nowadays</span> is a minimal venture studio, exploring the application of emerging technologies to everyday problems.
-    </h1>
-  </div>
-</section>
-
-<!-- Portfolio -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="flex flex-col divide-y divide-neutral-100 dark:divide-neutral-800 px-3">
+  <section class="flex flex-col md:flex-row gap-x-10">
+    <div class="w-full md:w-1/3">
+      <div class="sticky top-0 py-6">
+        <a href="{{ site.url | relative_url }}" class="font-medium hover:text-gray-700 dark:hover:text-gray-300">Nowadays</a>
+      </div>
+    </div>
+    <div class="w-full md:w-2/3 py-6 text-formatted">
+      <p>Nowadays is a minimal venture studio, exploring the application of emerging technologies to everyday problems.</p>
+      <p>For far too long, far too many people have had ambitions to grow a business to be big in every sense of the word. Big promises, record-breaking seed rounds, and massive teams. We want to do the exact opposite. We want to be small, focussed, and trustworthy.</p>
+      <p>We want a calm company of great people, with a clear purpose we can deliver on.</p>
+    </div>
+  </section>
+  <!-- Portfolio -->
   {% for venture in site.ventures reversed %}
-    <a href="{{ venture.url }}" class="bg-neutral-200/40 aspect-square rounded-lg p-3 text-sm relative hover:bg-neutral-200/60 transition">
-      <div class="absolute top-0 inset-x-0 p-3 flex justify-between">
-        <div>
-          <p>{{ venture.title }}</p>
-          <p class="text-neutral-400">{{ venture.description }}</p>
-        </div>
-        <div class="hidden">
-          <p class="text-neutral-400">{{ venture.path | split: "/" | last | split: "_" | first }}</p>
+    <section class="flex flex-col md:flex-row gap-x-10">
+      <div class="w-full md:w-1/3">
+        <div class="md:sticky top-0 py-6">
+          <div class="mb-6">
+            <p class="font-medium">{{ venture.title }}</p>
+            <p class="text-neutral-400">{{ venture.description }}</p>
+          </div>
+          <div class="text-formatted">{{ venture.content }}</div>
         </div>
       </div>
-      <div class="absolute inset-0 grid place-items-center">
-        {% assign featured_images = venture.images | where: "featured", true %}
-        {% if featured_images.size > 0 %}
-          <img src="{{ featured_images.first.path }}" alt="{{ venture.title }} logo" class="w-4/5 rounded-sm md:rounded-md {% if featured_images.first.border %}border border-gray-200/80{% endif %}">
-        {% else %}
-          <span class="text-4xl md:text-5xl font-semibold">{{ venture.title }}</span>
-        {% endif %}
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
+        {% assign venture_name = venture.path | split: "/" | last | split: "_" | last | split: "." | first %}
+        {% assign image_path = "assets/images/" | append: venture_name | append: "/" %}
+        {% for file in site.static_files %}
+          {% if file.path contains image_path %}
+            {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
+            <div class="w-full aspect-square py-12 bg-neutral-100/80 dark:bg-neutral-800/80 rounded-sm md:rounded-md flex items-center justify-center">
+              {% if jekyll.environment == "production" %}
+                <img src="https://cdn.squishbit.com/P7AsLqnfoMy{{ file.path }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
+              {% else %}
+                <img src="{{ file.path }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    </a>
+    </section>
   {% endfor %}
-</section>
+  <section class="flex justify-between items-end pt-14 pb-3 text-sm text-neutral-400">
+    <div>
+      <p>Get in touch</p>
+      <p class="text-neutral-700">hello@nowadays.tech</p>
+    </div>
+    <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
+  </section>  
+</div>

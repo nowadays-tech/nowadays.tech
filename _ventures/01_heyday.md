@@ -7,18 +7,16 @@ released: 2023-03-01
 published: true
 technologies: [OpenAI, GPT-3.5, Function Calling]
 images:
+  - path: /assets/images/heyday/heyday-share.jpg
+    alt: Heyday
+    featured: true
   - path: /assets/images/heyday/screen_01.png
     alt: Heyday app screenshot
     frame: true
-  - path: /assets/images/heyday/heyday_wordmark.svg
-    alt: Heyday wordmark
   - path: /assets/images/heyday/landing-page.png
     alt: Heyday landing page
   - path: /assets/images/heyday/screen_02.png
     alt: Heyday app screenshot
-  - path: /assets/images/heyday/heyday-share.jpg
-    alt: Heyday
-    featured: true
 ---
 
 In today's fast-paced world, mental health issues are on the rise, affecting millions of people globally. The pressures of modern life, including work stress, social media influence, economic uncertainties, and the ongoing effects of global events like the COVID-19 pandemic, have contributed to a significant increase in anxiety, depression, and other mental health disorders.
