@@ -36,7 +36,7 @@ title: "Nowadays"
             {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
             <div class="w-full aspect-square py-12 bg-neutral-100/80 dark:bg-neutral-800/80 rounded-sm md:rounded-md flex items-center justify-center">
               {% if jekyll.environment == "production" %}
-                <img src="https://cdn.squishbit.com/P7AsLqnfoMy{{ file.path }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
+                <img src="https://cdn.squishbit.com/P7AsLqnfoMy/{{ site.url }}/{{ file.path }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
               {% else %}
                 <img src="{{ file.path }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
               {% endif %}
