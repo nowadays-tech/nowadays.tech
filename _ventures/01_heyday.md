@@ -19,7 +19,7 @@ images:
     alt: Heyday app screenshot
 ---
 
-In today's fast-paced world, mental health issues are on the rise, affecting millions of people globally. The pressures of modern life, including work stress, social media influence, economic uncertainties, and the ongoing effects of global events like the COVID-19 pandemic, have contributed to a significant increase in anxiety, depression, and other mental health disorders.
+Mental health issues are on the rise, affecting millions of people globally. The pressures of modern life, including work stress, social media influence, economic uncertainties, and the ongoing effects of global events like the COVID-19 pandemic, have contributed to a significant increase in anxiety, depression, and other mental health disorders.
 
 Traditional mental health services face several limitations: High costs and long waiting times for in-person therapy sessions, limited availability of qualified therapists, especially in rural or underserved areas, stigma associated with seeking mental health support, and inconsistent quality of care and lack of personalized treatment plans.
 
