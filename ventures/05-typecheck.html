@@ -13,20 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville&family=Lora" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="antialiased tracking-tight bg-neutral-700 overflow-x-hidden" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col bg-white min-h-dvh pt-14">
-      <div class="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-100 mb-3">
-  <nav class="h-10 px-3 flex items-center justify-between">
-    <div>
-      <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-7000">Nowadays</a>
-    </div>
-    <span class="text-sm text-neutral-400" x-text="new Date().getFullYear()">2030</span>
-  </nav>
-</div>
-
-      <div class="h-full flex flex-col px-3">
-        <div class="flex-grow">
-          <div class="flex flex-col md:flex-row md:gap-x-3">
+  <body class="antialiased tracking-tight dark:bg-neutral-900" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col max-w-screen-2xl">
+      <div class="flex flex-col md:flex-row md:gap-x-3">
   <div class="w-full md:w-1/2 max-w-screen-md">
     <div class="flex flex-col md:sticky md:top-14 divide-y divide-gray-100">
       <div class="flex flex-col py-3">
@@ -44,23 +33,13 @@
     
       <div class="bg-neutral-200/40 rounded-lg block">
         <div class="w-full h-full 2xl:p-20 xl:p-16 lg:p-12 grid place-items-center">
-          <img loading="lazy" decoding="async" src="/assets/images/typecheck/typecheck_01.png" srcset="/assets/images/typecheck/typecheck_01.png 2880w, /assets/images/typecheck/typecheck_01-400w.png 400w, /assets/images/typecheck/typecheck_01-950w.png 950w, /assets/images/typecheck/typecheck_01-1400w.png 1400w" height="1800" width="2880" alt="Typecheck" class="w-full max-w-screen-xl rounded-sm md:rounded-md " />
+          <img loading="lazy" decoding="async" src="/assets/images/typecheck/typecheck_01.png" srcset="/assets/images/typecheck/typecheck_01.png" height="/assets/images/typecheck/typecheck_01.png" width="/assets/images/typecheck/typecheck_01.png" alt="Typecheck" class="w-full max-w-screen-xl rounded-sm md:rounded-md " />
         </div>
       </div>
     
   </div>
 </div>
 
-        </div>
-        <div class="flex justify-between items-end pt-14 pb-3 text-sm text-neutral-400">
-  <div>
-    <p>Get in touch</p>
-    <p class="text-neutral-700">hello@nowadays.tech</p>
-  </div>
-  <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
-</div>
-
-      </div>
     </main>
   </body>
 </html>
