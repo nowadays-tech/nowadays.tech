@@ -14,4 +14,4 @@ images:
     alt: Promptly Landing Page
 ---
 
-LLMs are stochastic by design, and the quality of their output is highly dependent on the quality of the prompt. Promptly is a tool for developing, testing, and sharing prompts.
+Promptly is a tool to develop, test, and share prompts for LLMs.

@@ -13,4 +13,4 @@ images:
     border: true
 ---
 
-Written content remains essential in this day and age. Yet, most people lack the skills to craft quality content. Typesmith is an AI-powered writing assistant that helps people write better.
+Typesmith is an AI writing assistant that helps people write better.
