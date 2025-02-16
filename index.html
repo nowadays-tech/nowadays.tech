@@ -6,11 +6,11 @@ title: "Nowadays"
 <div class="flex flex-col divide-y divide-neutral-100 dark:divide-neutral-800 px-3">
   <section class="flex flex-col md:flex-row gap-x-10">
     <div class="w-full md:w-1/3">
-      <div class="sticky top-0 py-6">
-        <a href="{{ site.url | relative_url }}" class="font-medium hover:text-gray-700 dark:hover:text-gray-300">Nowadays</a>
+      <div class="sticky top-0 pt-12 md:py-12">
+        <a href="{{ site.url | relative_url }}" class="text-lg hover:text-gray-700 dark:hover:text-gray-300">Nowadays</a>
       </div>
     </div>
-    <div class="w-full md:w-2/3 py-6 text-formatted">
+    <div class="w-full md:w-2/3 py-12 text-formatted">
       <p>Nowadays is a minimal venture studio, exploring the application of emerging technologies to everyday problems.</p>
       <p>For far too long, far too many people have had ambitions to grow a business to be big in every sense of the word. Big promises, record-breaking seed rounds, and massive teams. We want to do the exact opposite. We want to be small, focussed, and trustworthy.</p>
       <p>We want a calm company of great people, with a clear purpose we can deliver on.</p>
@@ -20,15 +20,15 @@ title: "Nowadays"
   {% for venture in site.ventures reversed %}
     <section class="flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 py-6">
+        <div class="md:sticky top-0 pt-12 md:py-12">
           <div class="mb-6">
-            <p class="font-medium">{{ venture.title }}</p>
+            <p class="text-lg">{{ venture.title }}</p>
             <p class="text-neutral-400">{{ venture.description }}</p>
           </div>
           <div class="text-formatted">{{ venture.content }}</div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-12">
         {% assign venture_name = venture.path | split: "/" | last | split: "_" | last | split: "." | first %}
         {% assign image_path = "assets/images/" | append: venture_name | append: "/" %}
         {% for file in site.static_files %}
@@ -46,7 +46,7 @@ title: "Nowadays"
       </div>
     </section>
   {% endfor %}
-  <section class="flex justify-between items-end pt-14 pb-3 text-sm text-neutral-400">
+  <section class="flex justify-between items-end pt-20 pb-6 text-sm text-neutral-400">
     <div>
       <p>Get in touch</p>
       <p class="text-neutral-700">hello@nowadays.tech</p>
