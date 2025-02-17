@@ -2,4 +2,4 @@
 
 ## Development
 
-JEKYLL_ENV=production bundle exec jekyll serve --livereload
+JEKYLL_ENV=development bundle exec jekyll serve --livereload
