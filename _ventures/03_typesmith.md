@@ -15,6 +15,8 @@ images:
 
 Typesmith is an AI writing assistant that helps people write better.
 
-At the time, most interactions with AI were through a chat interface where the subject of the conversation was embedded throughout the conversation. I wanted to create an experience where the subject of the conversation didn't change, but was continuously updated by both the user and the AI.
+At the time, most interactions with AI were through a chat interface where the subject of the conversation was embedded throughout the conversation.
+
+I wanted to create an experience where the subject of the conversation remained static, but was continuously updated by both the user and the AI.
 
 Later, OpenAI released their canvas feature inside of ChatGPT.
