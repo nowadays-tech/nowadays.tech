@@ -18,7 +18,7 @@ title: "Nowadays"
   </section>
   <!-- Portfolio -->
   {% for venture in site.ventures reversed %}
-    <section class="flex flex-col md:flex-row gap-x-10">
+    <section id="{{ venture.title | slugify }}" class="flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
         <div class="md:sticky top-0 pt-6 md:py-6">
           <div class="mb-6">
@@ -40,7 +40,7 @@ title: "Nowadays"
               {% else %}
                 {% assign image_url = file.path %}
               {% endif %}
-              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/80 dark:border-neutral-700 {% endif %}">
+              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %}">
             </div>
           {% endif %}
         {% endfor %}
