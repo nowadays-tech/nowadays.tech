@@ -34,13 +34,14 @@ title: "Nowadays"
         {% for file in site.static_files %}
           {% if file.path contains image_path %}
             {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
-            <div class="w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
               {% if jekyll.environment == "production" %}
                 {% assign image_url = "https://cdn.squishbit.com/P7AsLqnfoMy/" | append: site.url | append: file.path %}
               {% else %}
                 {% assign image_url = file.path %}
               {% endif %}
-              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %}">
+              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %} rendering-pixelated"
+                style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; image-rendering: -webkit-optimize-contrast;">
             </div>
           {% endif %}
         {% endfor %}
