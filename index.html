@@ -40,8 +40,7 @@ title: "Nowadays"
               {% else %}
                 {% assign image_url = file.path %}
               {% endif %}
-              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %} rendering-pixelated"
-                style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; image-rendering: -webkit-optimize-contrast;">
+              <img src="{{ image_url }}" alt="{{ venture.title }}" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %}">
             </div>
           {% endif %}
         {% endfor %}
