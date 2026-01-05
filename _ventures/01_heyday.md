@@ -1,7 +1,6 @@
 ---
 title: Heyday
 description: Accessible mental health support
-external_url: https://www.heyday.so
 status: Online
 released: 2023-03-01
 published: true

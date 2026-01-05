@@ -1,7 +1,6 @@
 ---
 title: Typesmith
 description: AI-assisted writing
-external_url: https://www.typesmith.com
 status: Online
 released: 2024-03-01
 published: true
