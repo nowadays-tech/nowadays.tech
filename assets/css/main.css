@@ -26,6 +26,14 @@
     @apply mb-0;
   }
 
+  .text-formatted a {
+    @apply underline;
+  }
+
+  .text-formatted a:hover {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
   .text-formatted hr {
     @apply my-3 md:my-5;
   }

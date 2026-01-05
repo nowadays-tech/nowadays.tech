@@ -5,4 +5,4 @@ published: true
 external_url: "https://github.com/danielfriis/ruby_llm-schema"
 ---
 
-A simple and clean Ruby DSL for creating JSON schemas.
+RubyLLM::Schema is built as a companion to [RubyLLM](https://github.com/crmne/ruby_llm) with the same principles of simplicity and ease of use.
