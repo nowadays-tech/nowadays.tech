@@ -1,6 +1,6 @@
 ---
 title: "RubyLLM::Schema"
-description: "A Ruby gem for generating LLM schemas"
+description: "A Ruby gem for working with structured output from LLMs"
 published: true
 external_url: "https://github.com/danielfriis/ruby_llm-schema"
 ---
