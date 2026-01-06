@@ -5,4 +5,4 @@ published: true
 external_url: "https://github.com/danielfriis/ruby_llm-schema"
 ---
 
-RubyLLM::Schema is built as a companion to [RubyLLM](https://github.com/crmne/ruby_llm) with the same principles of simplicity and ease of use.
+RubyLLM::Schema is built as a companion to [RubyLLM](https://github.com/crmne/ruby_llm) on the same principles of simplicity and ease of use. It provides a simple and clean Ruby DSL for creating JSON schemas used for structured output from LLMs.
