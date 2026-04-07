@@ -37,7 +37,7 @@ title: "Nowadays"
             {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
             <div class="subpixel-antialiased w-full {% unless is_svg %}aspect-square{% endunless %} py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
               {% if jekyll.environment == "production" %}
-                {% assign image_url = "https://cdn.squishbit.com/P7AsLqnfoMy/" | append: site.url | append: file.path %}
+                {% assign image_url = site.url | append: file.path %}
               {% else %}
                 {% assign image_url = file.path %}
               {% endif %}
