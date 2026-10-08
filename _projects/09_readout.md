@@ -7,11 +7,9 @@ released: 2026-09-10
 published: true
 technologies: [Claude, Gemini TTS, Exa, Rails]
 images:
-  - path: /assets/images/readout/01-logo-small.svg
-    alt: readout.fm logo
-    featured: true
   - path: /assets/images/readout/02-cover-small.png
     alt: Cover art of Daniel's morning readout
+    featured: true
 episode:
   title: Daniel’s morning readout
   cover: /assets/images/readout/02-cover-small.png

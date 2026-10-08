@@ -12,7 +12,8 @@ the right column.
 
 - **Show the product, never its website.** No screenshots of a landing page.
   Use the real thing: artwork the app generated, output it made, the app's own UI.
-- **Left column holds text only.** Title, description, a few short paragraphs.
+- **Left column holds text only.** Title and a few short paragraphs. The
+  `description` front matter shows only on the project's own page.
 - **Anything interactive goes in its own tile, first** in the right column
   (e.g. readout's latest episode via the `episode:` front matter).
 - **Every tile is square, with the same gray, padding and corners.** One
