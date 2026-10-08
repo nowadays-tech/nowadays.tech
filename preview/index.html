@@ -37,11 +37,10 @@
         <span class="shrink-0 text-xs tabular-nums text-zinc-500">9 projects</span>
       </div>
       <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link">
-        <p class="text-zinc-900 dark:text-zinc-100">A minimal venture studio, exploring the application of emerging technologies to everyday problems.
+        <p class="text-zinc-900 dark:text-zinc-100">An independent R&amp;D lab for applied AI.
 </p>
-        <p>'Minimal' as in; "without excess".</p>
-<p>No big promises, no record-breaking seed rounds, no massive teams. Just a calm company of great people, with a clear purpose we can deliver on.</p>
-<p>Our ultimate goal is to build things that help people in ways that make a real difference in their lives, personal or professional, however big or small that might be.</p>
+        <p>We take new technology from paper to working prototype: language models, real-time voice, physical AI.</p>
+<p>Part of our time goes to research and strategy for companies. The rest goes into our own products. Every project below started as an experiment.</p>
 
       </div>
     </div>
@@ -57,7 +56,7 @@
         <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
           <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
             <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
-              <a href="https://readout.fm" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">readout.fm</a>
+              <a href="https://readout.fm" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">readout.fm ↗</a>
             </h2>
             <span class="shrink-0 text-xs tabular-nums text-zinc-500">09</span>
           </div>
@@ -162,7 +161,7 @@
         <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
           <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
             <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
-              <a href="https://github.com/danielfriis/ruby_llm-schema" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">RubyLLM::Schema</a>
+              <a href="https://github.com/danielfriis/ruby_llm-schema" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">RubyLLM::Schema ↗</a>
             </h2>
             <span class="shrink-0 text-xs tabular-nums text-zinc-500">08</span>
           </div>
@@ -500,7 +499,7 @@
         <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
           <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
             <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
-              <a href="https://www.promptly.so" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">Promptly</a>
+              <a href="https://www.promptly.so" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">Promptly ↗</a>
             </h2>
             <span class="shrink-0 text-xs tabular-nums text-zinc-500">04</span>
           </div>
@@ -867,11 +866,17 @@
     </section>
   
 
-  <footer class="mb-20 flex gap-x-2 text-xs leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light">
-    <span class="after:content-['•'] after:ml-2">&copy; 2026 <a href="/">Nowadays</a></span>
-    <span x-data="{ time: '' }" x-init="
-      const tick = () => time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Copenhagen', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
-      tick(); setInterval(tick, 1000)" x-text="time">Copenhagen</span>
+  <footer class="mb-20 flex justify-between items-end gap-x-4 text-xs leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light">
+    <div>
+      <p>Get in touch</p>
+      <a href="mailto:hello@nowadays.tech" class="subtle-link text-zinc-900 dark:text-zinc-100">hello@nowadays.tech</a>
+    </div>
+    <div class="flex gap-x-2">
+      <span class="after:content-['•'] after:ml-2">&copy; 2026 <a href="/">Nowadays</a></span>
+      <span x-data="{ time: '' }" x-init="
+        const tick = () => time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Copenhagen', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+        tick(); setInterval(tick, 1000)" x-text="time">Copenhagen</span>
+    </div>
   </footer>
   
   <nav class="fixed bottom-3 right-3 z-50 max-w-[calc(100vw-1.5rem)] overflow-x-auto no-scrollbar flex gap-x-1 p-1 rounded-lg text-xs bg-white/90 dark:bg-zinc-800/90 backdrop-blur border border-zinc-200 dark:border-zinc-700 shadow-sm">
