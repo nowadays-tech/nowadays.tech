@@ -22,7 +22,7 @@ defaults:
       path: preview
     values:
       layout: preview
-      body_class: "antialiased bg-stone-50/50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100"
+      body_class: "antialiased bg-stone-50/50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100"
 
 plugins:
   - jekyll-postcss-v2
