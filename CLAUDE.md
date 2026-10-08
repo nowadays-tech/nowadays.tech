@@ -12,14 +12,9 @@ the right column.
 
 - **Show the product, never its website.** No screenshots of a landing page.
   Use the real thing: artwork the app generated, output it made, the app's own UI.
-- **Take real output from Daniel's own account (d@friis.me) in production.**
-  Render it with the app's own code. Do not mock it up.
-- **Logo is a text-only wordmark of the product's domain**, in the brand
-  colours, with no icon. Outline the letters so it renders without the font.
-- **Name the project after its domain** when it has one (e.g. `readout.fm`).
 - **Left column holds text only.** Title, description, a few short paragraphs.
-- **Something playable or usable goes in its own tile, first** in the right
-  column (e.g. readout's latest episode via the `episode:` front matter).
+- **Anything interactive goes in its own tile, first** in the right column
+  (e.g. readout's latest episode via the `episode:` front matter).
 - **Every tile is square, with the same gray, padding and corners.** One
   `tile` class string in `index.html` serves all of them. Image size comes from
   the filename: default fills 80% of the tile, `-small` fills 50%, `-bordered`
