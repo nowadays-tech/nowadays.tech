@@ -44,6 +44,10 @@
 }
 
 @layer utilities {
+  .subtle-link {
+    @apply underline decoration-zinc-300 underline-offset-[3px] transition-colors hover:text-black hover:decoration-zinc-500 dark:decoration-zinc-600 dark:hover:text-white dark:hover:decoration-zinc-400;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

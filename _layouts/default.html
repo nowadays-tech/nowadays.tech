@@ -23,7 +23,7 @@
       plausible.init()
     </script>
   </head>
-  <body class="antialiased tracking-tight dark:bg-neutral-900" x-init="console.log('It\'s alive!')">
+  <body class="{{ page.body_class | default: 'antialiased tracking-tight dark:bg-neutral-900' }}" x-init="console.log('It\'s alive!')">
     <main class="flex flex-col max-w-screen-2xl">
       {{ content }}
     </main>
