@@ -24,3 +24,6 @@ plugins:
 
 postcss:
   cache: false
+
+exclude:
+  - CLAUDE.md
