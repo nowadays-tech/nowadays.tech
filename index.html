@@ -27,12 +27,6 @@ title: "Nowadays"
             <p class="text-neutral-500">{{ venture.description }}</p>
           </div>
           <div class="text-formatted">{{ venture.content }}</div>
-          {% if venture.episode %}
-            <div class="mt-6">
-              <p class="text-neutral-500">Latest episode · {{ venture.episode.date | date: "%-d %B %Y" }} · {{ venture.episode.duration }}</p>
-              <audio controls preload="none" src="{{ venture.episode.path | relative_url }}" class="w-full mt-2"></audio>
-            </div>
-          {% endif %}
         </div>
       </div>
       <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
@@ -51,6 +45,20 @@ title: "Nowadays"
             </div>
           {% endif %}
         {% endfor %}
+        {% if venture.episode %}
+          <div class="w-full py-16 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-[80%] max-w-xl flex flex-col gap-y-4">
+              <div class="flex items-center gap-x-4">
+                <img src="{{ venture.episode.cover | relative_url }}" alt="" class="w-16 h-16 rounded-sm md:rounded-md">
+                <div>
+                  <p class="font-medium dark:text-neutral-100">{{ venture.episode.title }}</p>
+                  <p class="text-neutral-500">Latest episode · {{ venture.episode.date | date: "%-d %B %Y" }} · {{ venture.episode.duration }}</p>
+                </div>
+              </div>
+              <audio controls preload="none" src="{{ venture.episode.path | relative_url }}" class="w-full"></audio>
+            </div>
+          </div>
+        {% endif %}
       </div>
     </section>
   {% endfor %}
