@@ -21,32 +21,43 @@
       plausible.init()
     </script>
   </head>
-  <body class="antialiased tracking-tight dark:bg-neutral-900" x-init="console.log('It\'s alive!')">
+  <body class="antialiased bg-stone-50/50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100" x-init="console.log('It\'s alive!')">
     <main class="flex flex-col max-w-screen-2xl">
-      <div class="flex flex-col divide-y divide-neutral-100 dark:divide-neutral-800 px-3">
-  <section class="flex flex-col md:flex-row gap-x-10">
+      
+
+
+
+
+<div class="flex flex-col px-3">
+  <section class="-mx-3 mb-20 px-3 pt-6 pb-32 flex flex-col md:flex-row gap-x-10 bg-zinc-800 text-zinc-100 dark:bg-zinc-950 shadow-[0_0_0_100vmax] shadow-zinc-800 dark:shadow-zinc-950 [clip-path:inset(0_-100vmax)]">
     <div class="w-full md:w-1/3">
-      <div class="sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-        <a href="https://www.nowadays.tech" class="font-medium hover:text-gray-700 dark:hover:text-gray-300">Nowadays</a>
+      <div class="md:pr-[10%]">
+        <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-zinc-700 dark:border-zinc-800">
+          <h1 class="text-sm font-medium text-zinc-50">Nowadays</h1>
+          <span class="shrink-0 text-xs tabular-nums text-zinc-400 dark:text-zinc-500">9 projects</span>
+        </div>
+        <div class="text-sm leading-relaxed text-zinc-300 dark:text-zinc-400 font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0">
+          <p class="text-zinc-50 dark:text-zinc-100">An independent R&amp;D lab for applied AI.</p>
+          <p>We turn new research into working prototypes. Right now that means language models, real-time voice and physical AI.</p>
+          <p>We split our time between research for companies and products of our own. Every project below is an experiment made real.</p>
+        </div>
       </div>
     </div>
-    <div class="w-full md:w-2/3 py-6 md:pr-[10%] text-formatted">
-      <p>A minimal venture studio, exploring the application of emerging technologies to everyday problems.</p>
-      <p>'Minimal' as in; "without excess".</p>
-      <p>No big promises, no record-breaking seed rounds, no massive teams. Just a calm company of great people, with a clear purpose we can deliver on.</p>
-      <p>Our ultimate goal is to build things that help people in ways that make a real difference in their lives, personal or professional, however big or small that might be.</p>
-    </div>
+    <div class="hidden md:block md:w-2/3"></div>
   </section>
-  <!-- Portfolio -->
+
   
-    <section id="readout-fm" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="readout-fm" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium"><a href="https://readout.fm" target="_blank" class="hover:text-gray-700 dark:hover:text-gray-300">readout.fm ↗</a></p>
-            <p class="text-neutral-500">Your news, read to you</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              <a href="https://readout.fm" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">readout.fm ↗</a>
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">09</span>
           </div>
-          <div class="text-formatted"><p>readout is a personal AI-generated podcast. You follow the topics you are curious about and save links you want covered.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>readout is a personal AI-generated podcast. You follow the topics you are curious about and save links you want covered.</p>
 
 <p>On the days and at the hour you choose, it researches the live web, keeps only the stories that moved, and writes them into a short radio script. Two hosts read it aloud.</p>
 
@@ -54,18 +65,17 @@
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
-        
-          <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+          <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
             <div class="w-[80%] max-w-xl flex flex-col gap-y-4">
               <div class="flex items-center gap-x-4">
-                <img src="/assets/images/readout/02-cover-small.png" alt="" class="w-16 h-16 rounded-sm md:rounded-md">
-                <div>
-                  <p class="font-medium dark:text-neutral-100">Daniel’s morning readout</p>
-                  <p class="text-neutral-500">Latest episode · 7 October 2026 · 31 min</p>
+                <img src="/assets/images/readout/02-cover-small.png" alt="" class="w-16 h-16 rounded-md">
+                <div class="text-sm leading-relaxed">
+                  <p class="text-zinc-900 dark:text-zinc-100">Daniel’s morning readout</p>
+                  <p class="text-xs tabular-nums text-zinc-500">Latest episode · Oct 7, 2026 · 31 min</p>
                 </div>
               </div>
               <audio controls preload="none" src="/assets/audio/readout/2026-10-07.mp3" class="w-full"></audio>
@@ -108,7 +118,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/readout/02-cover-small.png" alt="readout.fm" class="max-w-[50%] max-h-[50%] rounded-sm md:rounded-md ">
             </div>
@@ -133,19 +143,21 @@
       </div>
     </section>
   
-    <section id="rubyllm-schema" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="rubyllm-schema" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium"><a href="https://github.com/danielfriis/ruby_llm-schema" target="_blank" class="hover:text-gray-700 dark:hover:text-gray-300">RubyLLM::Schema ↗</a></p>
-            <p class="text-neutral-500">A Ruby gem for working with structured output from LLMs</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              <a href="https://github.com/danielfriis/ruby_llm-schema" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">RubyLLM::Schema ↗</a>
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">08</span>
           </div>
-          <div class="text-formatted"><p>RubyLLM::Schema is built as a companion to <a href="https://github.com/crmne/ruby_llm">RubyLLM</a> on the same principles of simplicity and ease of use. It provides a simple and clean Ruby DSL for creating JSON schemas used for structured output from LLMs.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>RubyLLM::Schema is built as a companion to <a href="https://github.com/crmne/ruby_llm">RubyLLM</a> on the same principles of simplicity and ease of use. It provides a simple and clean Ruby DSL for creating JSON schemas used for structured output from LLMs.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -187,7 +199,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/rubyllm-schema/01-code.png" alt="RubyLLM::Schema" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -210,19 +222,21 @@
       </div>
     </section>
   
-    <section id="frontdesk" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="frontdesk" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Frontdesk</p>
-            <p class="text-neutral-500">AI-powered customer service</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Frontdesk
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">07</span>
           </div>
-          <div class="text-formatted"><p>Frontdesk is a voice-based customer service platform that uses AI to help businesses free up time for what really matters.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Frontdesk is a voice-based customer service platform that uses AI to help businesses free up time for what really matters.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -238,7 +252,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/frontdesk/01-frontdesk.png" alt="Frontdesk" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -247,7 +261,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/frontdesk/02-frontdesk.png" alt="Frontdesk" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -294,19 +308,21 @@
       </div>
     </section>
   
-    <section id="klerk" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="klerk" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Klerk</p>
-            <p class="text-neutral-500">AI-powered due diligence</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Klerk
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">06</span>
           </div>
-          <div class="text-formatted"><p>Klerk is an AI-powered due diligence tool that helps companies extract and analyze data from a vast amount of documents.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Klerk is an AI-powered due diligence tool that helps companies extract and analyze data from a vast amount of documents.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -334,7 +350,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/klerk/ask-shadowed.png" alt="Klerk" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -343,9 +359,9 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/klerk/klerk_01-bordered.png" alt="Klerk" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/klerk/klerk_01-bordered.png" alt="Klerk" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
@@ -378,19 +394,21 @@
       </div>
     </section>
   
-    <section id="typecheck" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="typecheck" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Typecheck</p>
-            <p class="text-neutral-500">Personality assessment tool</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Typecheck
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">05</span>
           </div>
-          <div class="text-formatted"><p>Typecheck is a personality assessment tool that uses the Big Five Personality Traits to help individuals understand their personality type and preferences.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Typecheck is a personality assessment tool that uses the Big Five Personality Traits to help individuals understand their personality type and preferences.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -434,9 +452,9 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/typecheck/typecheck_01-bordered.png" alt="Typecheck" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/typecheck/typecheck_01-bordered.png" alt="Typecheck" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
@@ -455,19 +473,21 @@
       </div>
     </section>
   
-    <section id="promptly" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="promptly" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium"><a href="https://www.promptly.so" target="_blank" class="hover:text-gray-700 dark:hover:text-gray-300">Promptly ↗</a></p>
-            <p class="text-neutral-500">Prompt development and testing</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              <a href="https://www.promptly.so" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">Promptly ↗</a>
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">04</span>
           </div>
-          <div class="text-formatted"><p>Promptly is a tool to develop, test, and share prompts for LLMs.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Promptly is a tool to develop, test, and share prompts for LLMs.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -503,18 +523,18 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/promptly/app_01_backup-bordered.png" alt="Promptly" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/promptly/app_01_backup-bordered.png" alt="Promptly" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/promptly/landing-page_01-bordered.png" alt="Promptly" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/promptly/landing-page_01-bordered.png" alt="Promptly" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
@@ -539,14 +559,17 @@
       </div>
     </section>
   
-    <section id="typesmith" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="typesmith" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Typesmith</p>
-            <p class="text-neutral-500">AI-assisted writing</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Typesmith
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">03</span>
           </div>
-          <div class="text-formatted"><p>Typesmith is an AI writing assistant that helps people write better.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Typesmith is an AI writing assistant that helps people write better.</p>
 
 <p>At the time, most interactions with AI were through a chat interface where the subject of the conversation was embedded throughout the conversation.</p>
 
@@ -556,8 +579,7 @@
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -603,7 +625,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/typesmith/01-concept.svg" alt="Typesmith" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -612,9 +634,9 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/typesmith/app_01_backup-bordered.png" alt="Typesmith" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/typesmith/app_01_backup-bordered.png" alt="Typesmith" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
@@ -629,19 +651,21 @@
       </div>
     </section>
   
-    <section id="little-legends" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="little-legends" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Little Legends</p>
-            <p class="text-neutral-500">Empowerment through storytelling</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Little Legends
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">02</span>
           </div>
-          <div class="text-formatted"><p>Little Legends is a children’s book concept that embeds the child in aspirational stories that are designed to spark imagination.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Little Legends is a children’s book concept that embeds the child in aspirational stories that are designed to spark imagination.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -673,7 +697,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/little-legends/ll-orange.svg" alt="Little Legends" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -682,7 +706,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/little-legends/ll_logotype_stacked.svg" alt="Little Legends" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -713,19 +737,21 @@
       </div>
     </section>
   
-    <section id="heyday" class="flex flex-col md:flex-row gap-x-10">
+    
+    <section id="heyday" class="mb-20 flex flex-col md:flex-row gap-x-10">
       <div class="w-full md:w-1/3">
-        <div class="md:sticky top-0 pt-6 md:py-6 md:pr-[10%]">
-          <div class="mb-6">
-            <p class="font-medium">Heyday</p>
-            <p class="text-neutral-500">Accessible mental health support</p>
+        <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
+          <div class="mb-4 pb-1 flex justify-between items-baseline gap-x-4 border-b border-gray-200 dark:border-zinc-800">
+            <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
+              Heyday
+            </h2>
+            <span class="shrink-0 text-xs tabular-nums text-zinc-500">01</span>
           </div>
-          <div class="text-formatted"><p>Heyday is a mental health support app that uses AI to provide accessible and affordable mental health support.</p>
+          <div class="text-sm leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light [&_p]:mb-3 [&_p:last-of-type]:mb-0 [&_a]:subtle-link"><p>Heyday is a mental health support app that uses AI to provide accessible and affordable mental health support.</p>
 </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">
-        
+      <div class="w-full md:w-2/3 flex flex-col gap-y-3 pt-6 md:pt-0">
         
         
         
@@ -745,7 +771,7 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
               <img src="https://www.nowadays.tech/assets/images/heyday/heyday-share.jpg" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md ">
             </div>
@@ -754,27 +780,27 @@
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/heyday/landing-page-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/heyday/landing-page-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/heyday/screen_01-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/heyday/screen_01-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
           
             
             
-            <div class="subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center">
+            <div class="w-full aspect-square py-6 bg-stone-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center">
               
-              <img src="https://www.nowadays.tech/assets/images/heyday/screen_02-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md  border border-gray-200/50 dark:border-neutral-700 ">
+              <img src="https://www.nowadays.tech/assets/images/heyday/screen_02-bordered.png" alt="Heyday" class="max-w-[80%] max-h-[80%] rounded-sm md:rounded-md border border-zinc-200/60 dark:border-zinc-700">
             </div>
           
         
@@ -811,14 +837,21 @@
       </div>
     </section>
   
-  <section class="flex justify-between items-end pt-20 pb-6 text-sm text-neutral-400">
+
+  <footer class="mb-20 flex justify-between items-end gap-x-4 text-xs leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light">
     <div>
       <p>Get in touch</p>
-      <p class="text-neutral-700">hello@nowadays.tech</p>
+      <a href="mailto:hello@nowadays.tech" class="subtle-link text-zinc-900 dark:text-zinc-100">hello@nowadays.tech</a>
     </div>
-    <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
-  </section>  
+    <div class="flex gap-x-2">
+      <span class="after:content-['•'] after:ml-2">&copy; 2026 <a href="/">Nowadays</a></span>
+      <span x-data="{ time: '' }" x-init="
+        const tick = () => time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Copenhagen', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+        tick(); setInterval(tick, 1000)" x-text="time">Copenhagen</span>
+    </div>
+  </footer>
 </div>
+
     </main>
   </body>
 </html>
