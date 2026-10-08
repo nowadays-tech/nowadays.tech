@@ -27,6 +27,12 @@ title: "Nowadays"
             <p class="text-neutral-500">{{ venture.description }}</p>
           </div>
           <div class="text-formatted">{{ venture.content }}</div>
+          {% if venture.episode %}
+            <div class="mt-6">
+              <p class="text-neutral-500">Latest episode · {{ venture.episode.date | date: "%-d %B %Y" }} · {{ venture.episode.duration }}</p>
+              <audio controls preload="none" src="{{ venture.episode.path | relative_url }}" class="w-full mt-2"></audio>
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="w-full md:w-2/3 flex flex-col gap-y-3 py-6">

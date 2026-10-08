@@ -7,14 +7,15 @@ released: 2026-09-10
 published: true
 technologies: [Claude, Gemini TTS, Exa, Rails]
 images:
-  - path: /assets/images/readout/01-landing-bordered.png
-    alt: readout landing page
+  - path: /assets/images/readout/01-logo.svg
+    alt: readout logo
     featured: true
-    border: true
-  - path: /assets/images/readout/02-briefing.png
-    alt: A readout briefing
-  - path: /assets/images/readout/03-cover.png
-    alt: readout podcast cover art
+  - path: /assets/images/readout/02-cover.png
+    alt: Cover art of Daniel's morning readout
+episode:
+  path: /assets/audio/readout/2026-10-07.mp3
+  date: 2026-10-07
+  duration: 31 min
 ---
 
 readout is a personal AI-generated podcast. You follow the topics you are curious about and save links you want covered.
