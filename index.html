@@ -33,20 +33,6 @@ title: "Nowadays"
         {% assign venture_name = venture.path | split: "/" | last | split: "_" | last | split: "." | first %}
         {% assign image_path = "assets/images/" | append: venture_name | append: "/" %}
         {% assign tile = "subpixel-antialiased w-full aspect-square py-6 bg-neutral-100/80 dark:bg-neutral-700/50 rounded-sm md:rounded-md flex items-center justify-center" %}
-        {% for file in site.static_files %}
-          {% if file.path contains image_path %}
-            {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
-            {% if file.path contains '-small' %}{% assign size = "max-w-[50%] max-h-[50%]" %}{% else %}{% assign size = "max-w-[80%] max-h-[80%]" %}{% endif %}
-            <div class="{{ tile }}">
-              {% if jekyll.environment == "production" %}
-                {% assign image_url = site.url | append: file.path %}
-              {% else %}
-                {% assign image_url = file.path %}
-              {% endif %}
-              <img src="{{ image_url }}" alt="{{ venture.title }}" class="{{ size }} rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %}">
-            </div>
-          {% endif %}
-        {% endfor %}
         {% if venture.episode %}
           <div class="{{ tile }}">
             <div class="w-[80%] max-w-xl flex flex-col gap-y-4">
@@ -61,6 +47,20 @@ title: "Nowadays"
             </div>
           </div>
         {% endif %}
+        {% for file in site.static_files %}
+          {% if file.path contains image_path %}
+            {% if file.path contains '-bordered' %}{% assign bordered = true %}{% else %}{% assign bordered = false %}{% endif %}
+            {% if file.path contains '-small' %}{% assign size = "max-w-[50%] max-h-[50%]" %}{% else %}{% assign size = "max-w-[80%] max-h-[80%]" %}{% endif %}
+            <div class="{{ tile }}">
+              {% if jekyll.environment == "production" %}
+                {% assign image_url = site.url | append: file.path %}
+              {% else %}
+                {% assign image_url = file.path %}
+              {% endif %}
+              <img src="{{ image_url }}" alt="{{ venture.title }}" class="{{ size }} rounded-sm md:rounded-md {% if bordered %} border border-gray-200/50 dark:border-neutral-700 {% endif %}">
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </section>
   {% endfor %}

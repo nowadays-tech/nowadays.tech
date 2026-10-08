@@ -1,5 +1,5 @@
 ---
-title: readout
+title: readout.fm
 description: Your news, read to you
 external_url: https://readout.fm
 status: Online
