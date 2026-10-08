@@ -7,7 +7,8 @@ module.exports = {
     './_layouts/**/*.html',
     './_pages/**/*.html',
     './_posts/*.md',
-    './*.html'
+    './*.html',
+    './_config.yml'
   ],
   theme: {
     fontFamily: {
