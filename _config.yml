@@ -6,18 +6,18 @@ permalink: /:collection/:slug
 
 include:
   - _pages
-  - _ventures
+  - _projects
 
 collections:
-  ventures:
+  projects:
     output: true
     permalink: /:collection/:slug
 
 defaults:
   - scope:
-      type: ventures
+      type: projects
     values:
-      layout: venture
+      layout: project
 
 plugins:
   - jekyll-postcss-v2

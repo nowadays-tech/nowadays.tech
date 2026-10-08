@@ -6,7 +6,7 @@ GitHub Pages, and the repo is public. Build locally with Ruby 3.2.2:
 
 ## Portfolio items
 
-One file per project in `_ventures/NN_<name>.md`. The home page lists them
+One file per project in `_projects/NN_<name>.md`. The home page lists them
 newest first. `<name>` is the folder under `assets/images/` whose files fill
 the right column.
 
