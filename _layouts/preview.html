@@ -17,7 +17,7 @@ layout: default
         <div class="md:sticky top-0 md:pt-6 md:-mt-6 md:pr-[10%]">
           <div class="{{ heading }}">
             <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50">
-              {% if project.external_url %}<a href="{{ project.external_url }}" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
+              {% if project.external_url %}<a href="{{ project.external_url }}" target="_blank" rel="noopener" class="transition-colors hover:text-zinc-500 dark:hover:text-zinc-400">{{ project.title }} ↗</a>{% else %}{{ project.title }}{% endif %}
             </h2>
             <span class="{{ meta }}">{{ index }}</span>
           </div>
@@ -59,11 +59,17 @@ layout: default
     </section>
   {% endfor %}
 
-  <footer class="mb-20 flex gap-x-2 text-xs leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light">
-    <span class="after:content-['•'] after:ml-2">&copy; {{ site.time | date: "%Y" }} <a href="/">Nowadays</a></span>
-    <span x-data="{ time: '' }" x-init="
-      const tick = () => time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Copenhagen', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
-      tick(); setInterval(tick, 1000)" x-text="time">Copenhagen</span>
+  <footer class="mb-20 flex justify-between items-end gap-x-4 text-xs leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light">
+    <div>
+      <p>Get in touch</p>
+      <a href="mailto:hello@nowadays.tech" class="subtle-link text-zinc-900 dark:text-zinc-100">hello@nowadays.tech</a>
+    </div>
+    <div class="flex gap-x-2">
+      <span class="after:content-['•'] after:ml-2">&copy; {{ site.time | date: "%Y" }} <a href="/">Nowadays</a></span>
+      <span x-data="{ time: '' }" x-init="
+        const tick = () => time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Copenhagen', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+        tick(); setInterval(tick, 1000)" x-text="time">Copenhagen</span>
+    </div>
   </footer>
   {% assign variants = site.pages | where_exp: "p", "p.intro" | sort: "order" %}
   <nav class="fixed bottom-3 right-3 z-50 max-w-[calc(100vw-1.5rem)] overflow-x-auto no-scrollbar flex gap-x-1 p-1 rounded-lg text-xs bg-white/90 dark:bg-zinc-800/90 backdrop-blur border border-zinc-200 dark:border-zinc-700 shadow-sm">
