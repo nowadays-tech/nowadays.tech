@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+      <title>Agent Screen | Nowadays</title>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Baskervville&family=Lora&family=Shafarik" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-a8JV1Agx-v2e7HG9aEnQi.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+  </head>
+  <body class="antialiased bg-stone-50/50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100" x-init="console.log('It\'s alive!')">
+    <main class="flex flex-col max-w-screen-2xl">
+      <div class="flex flex-col md:flex-row md:gap-x-3">
+  <div class="w-full md:w-1/2 max-w-screen-md">
+    <div class="flex flex-col md:sticky md:top-14 divide-y divide-gray-100">
+      <div class="flex flex-col py-3">
+        <h1>Agent Screen</h1>
+        <p class="text-neutral-500">A spam filter for AI agents</p>
+      </div>
+      <div class="text-formatted text-neutral-500 pt-3 pb-10">
+        <p>Agent Screen is a Mac menu bar app that sits between Claude Code and the Anthropic API. It passes every request through unchanged.</p>
+
+<p>When an agent reads outside text, such as a web page, a search result or an MCP tool’s output, a small decision model scores it. That model is Superagent’s <a href="https://huggingface.co/superagent-ai/security-one-27b">Security-One</a>. Text that looks like prompt injection gets flagged in the menu bar.</p>
+
+<p>Today it only flags. It never blocks. Read why in <a href="https://www.danielfriis.com/notes/ai-needs-a-spam-filter/">AI needs a spam filter</a>.</p>
+
+      </div>
+      
+        <dl class="divide-y divide-gray-100">
+          <div class="grid grid-cols-2 py-1">
+            <dt>Index</dt>
+            <dd class="text-neutral-500">10</dd>
+          </div>
+          
+            <div class="grid grid-cols-2 py-1">
+              <dt>Released</dt>
+              <dd class="text-neutral-500">October 2026</dd>
+            </div>
+          
+          
+            <div class="grid grid-cols-2 py-1">
+              <dt>Status</dt>
+              <dd class="text-neutral-500">Open source</dd>
+            </div>
+          
+          
+            <div class="grid grid-cols-2 py-1">
+              <dt>URL</dt>
+              <dd class="text-neutral-500">https://github.com/nowadays-tech/agent-screen</dd>
+            </div>
+          
+          
+            <div class="grid grid-cols-2 py-1">
+              <dt>Technologies</dt>
+              <dd class="text-neutral-500">
+                Swift · Claude Code · Security-One
+              </dd>
+            </div>
+          
+        </dl>
+      
+    </div>
+  </div>
+  <div class="w-full flex flex-col gap-y-3 py-3">
+    
+      <div class="bg-neutral-200/40 rounded-lg block">
+        <div class="w-full h-full 2xl:p-20 xl:p-16 lg:p-12 grid place-items-center">
+          <img loading="lazy" decoding="async" src="/assets/images/agent-screen/01-screen.png" srcset="/assets/images/agent-screen/01-screen.png" height="/assets/images/agent-screen/01-screen.png" width="/assets/images/agent-screen/01-screen.png" alt="Text from web pages, search results, MCP tools and CLI output passes a screen before it reaches the agent" class="w-full max-w-screen-xl rounded-sm md:rounded-md " />
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+    </main>
+  </body>
+</html>
