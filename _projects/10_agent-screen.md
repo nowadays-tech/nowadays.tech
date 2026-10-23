@@ -14,6 +14,6 @@ images:
 
 Agent Screen is a Mac menu bar app that sits between Claude Code and the Anthropic API. It passes every request through unchanged.
 
-When an agent reads outside text, such as a web page, a search result or an MCP tool's output, a small decision model scores it. That model is Superagent's Security-One. Text that looks like prompt injection gets flagged in the menu bar.
+When an agent reads outside text, such as a web page, a search result or an MCP tool's output, a small decision model scores it. That model is Superagent's [Security-One](https://huggingface.co/superagent-ai/security-one-27b). Text that looks like prompt injection gets flagged in the menu bar.
 
 Today it only flags. It never blocks. Read why in [AI needs a spam filter](https://www.danielfriis.com/notes/ai-needs-a-spam-filter/).
