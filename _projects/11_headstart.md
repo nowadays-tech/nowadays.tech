@@ -1,7 +1,7 @@
 ---
 title: Headstart
 description: A todo list you share with your AI assistant
-external_url: https://github.com/nowadays-tech/headstart
+external_url: https://headstart.lab.nowadays.tech
 status: Open source
 released: 2026-10-27
 # Stays unpublished until the iPhone screenshot from NOW-194 is in
