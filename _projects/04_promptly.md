@@ -1,7 +1,6 @@
 ---
 title: Promptly
 description: Prompt development and testing
-external_url: https://www.promptly.so
 status: Online
 released: 2024-03-01
 published: true
